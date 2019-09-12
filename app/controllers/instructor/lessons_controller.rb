@@ -20,12 +20,17 @@ class Instructor::LessonsController < ApplicationController
     end
   end
 
+  helper_method :current_lesson
+  def current_lesson
+    @current_lesson ||= Lesson.find(params[:id])
+  end
+
   helper_method :current_section
   def current_section
     @current_section ||= Section.find(params[:section_id])
   end
 
   def lesson_params
-    params.require(:lesson).permit(:title, :subtitle)
+    params.require(:lesson).permit(:title, :subtitle, :video)
   end
 end

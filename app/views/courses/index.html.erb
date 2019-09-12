@@ -3,7 +3,7 @@
 <div class="booyah-box col-1- offset-1">
   <h1 class="text-center">Learn something today</h1>
   <hr />
-
+  <%= image_tag 'learn.jpg', class: 'img-fluid' %>
   <% @courses.each do |course| %>
     <h2 class="text-center">
       <%= link_to course.title, course_path(course) %>    
