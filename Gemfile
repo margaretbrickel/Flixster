@@ -70,7 +70,7 @@ source 'https://rails-assets.org' do
 end
 
 gem 'simple_form'
-gem 'devise'
+gem 'devise', '>= 4.7.1'
 gem 'carrierwave', '~> 2.0'
 gem "mini_magick"
 #gem "fog-aws"
